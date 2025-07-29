@@ -63,7 +63,7 @@
   <button onclick="calculate()">Calculate</button>
   
   <div id="result"></div>
-  <div class="thank-you">🙏 Thank you. To calculate again, please refresh the page.</div>
+  <div class="thank-you"> Thank you. To calculate again, please refresh the page.</div>
 </div>
 
 <script>
@@ -74,13 +74,13 @@
     const resultDiv = document.getElementById('result');
 
     if (num1 === "" || num2 === "") {
-      resultDiv.innerHTML = "❌ Please enter both numbers.";
+      resultDiv.innerHTML = " Please enter both numbers.";
       resultDiv.className = "error";
       return;
     }
 
     if (operation === "") {
-      resultDiv.innerHTML = "❌ Please select an operation.";
+      resultDiv.innerHTML = " Please select an operation.";
       resultDiv.className = "error";
       return;
     }
@@ -100,12 +100,12 @@
         result = a * b;
         break;
       case "div":
-        result = b !== 0 ? (a / b) : "❌ Error: Cannot divide by zero!";
+        result = b !== 0 ? (a / b) : " Error: Cannot divide by zero!";
         break;
     }
 
     resultDiv.className = "";
-    resultDiv.innerHTML = "✅ Result: " + result;
+    resultDiv.innerHTML = "Result: " + result;
   }
 </script>
 
